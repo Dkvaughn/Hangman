@@ -20,6 +20,7 @@ var selectableWords =           // Word list
         "WITCHER",
         "BREATHOFTHEWILD",
         "PERSONA",
+        "DARKSOULS",
     ];
 
 
@@ -43,7 +44,9 @@ function resetGame() {
     currentWordIndex = Math.floor(Math.random() * (selectableWords.length));
 
     // clear everything out of the arrays
+    
     guessedLetters = [];
+    
     guessingWord = [];
 
     // clear off the hang man image after the game
@@ -57,7 +60,9 @@ function resetGame() {
 
     // Hide imges till needed
     document.getElementById("pressKeyTryAgain").style.cssText= "display: none";
+
     document.getElementById("gameover-image").style.cssText = "display: none";
+    
     document.getElementById("youwin-image").style.cssText = "display: none";
 
     // Show display
@@ -78,7 +83,9 @@ function updateDisplay() {
 
 
     document.getElementById("currentWord").innerText = guessingWordText;
+
     document.getElementById("remainingGuesses").innerText = remainingGuesses;
+    
     document.getElementById("guessedLetters").innerText = guessedLetters;
 };
 
